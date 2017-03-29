@@ -30,16 +30,30 @@
 // 	numArray.pop()
 // 	console.log(numArray)
 
-function trans (name,cost,seats) {
-	this.name= name
-	this.cost = cost
+// function trans (name,cost,seats) {
+// 	this.name= name
+// 	this.cost = cost
+// 	this.seats = seats
+// }
+
+// var bart = new trans('Bart', 5.80, 120)
+// var muni = new trans('Muni',2.25, 50)
+// var trolley = new trans('Trolley', 7, 25)
+
+// console.log(bart)
+// console.log(muni)
+// console.log(trolley)
+
+function restaurants (name,seats,bookedseats) {
+	this.name = name
 	this.seats = seats
+	this.bookedseats = bookedseats
 }
 
-var bart = new trans('Bart', 5.80, 120)
-var muni = new trans('Muni',2.25, 50)
-var trolley = new trans('Trolley', 7, 25)
+var burrito = new restaurants("Kanye Asada", 20, 10)
+var pizza = new restaurants("Project Pie", 20, 10)
+var burger = new restaurants("Super Duper", 20, 10)
 
-console.log(bart)
-console.log(muni)
-console.log(trolley)
+console.log(burrito, pizza, burger)
+
+
