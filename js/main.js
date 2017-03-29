@@ -44,16 +44,24 @@
 // console.log(muni)
 // console.log(trolley)
 
-function restaurants (name,seats,bookedseats) {
+function restaurants (name,seats,bookedseats,seatsOpen) {
 	this.name = name
 	this.seats = seats
 	this.bookedseats = bookedseats
+	this.seatsAvailable = function() {
+		return seats - bookedseats
+	}
+	this.seatsOpen = this.seatsAvailable()
 }
 
 var burrito = new restaurants("Kanye Asada", 20, 10)
 var pizza = new restaurants("Project Pie", 20, 10)
 var burger = new restaurants("Super Duper", 20, 10)
 
+
+
 console.log(burrito, pizza, burger)
+
+
 
 
